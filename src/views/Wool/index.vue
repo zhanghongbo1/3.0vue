@@ -1,5 +1,5 @@
 <template>
     <div>
-        echarts
+        Wool
     </div>
 </template>

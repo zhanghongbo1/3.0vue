@@ -8,15 +8,15 @@ module.exports = {
     
     assetsDir: "assets",
     chainWebpack: config => {
-      config.module
-      .rule("image-webpack-loader")
-      .test(/\.(gif|png|jpe?g|svg)$/i)
-      .use("file-loader")
-      .loader("image-webpack-loader")
-      .tap(() => ({
-        disable: process.env.NODE_ENV !== "production"
-      }))
-      .end();
+      // config.module
+      // .rule("image-webpack-loader")
+      // .test(/\.(gif|png|jpe?g|svg)$/i)
+      // .use("file-loader")
+      // .loader("image-webpack-loader")
+      // .tap(() => ({
+      //   disable: process.env.NODE_ENV !== "production"
+      // }))
+      // .end();
     
     config.resolve.alias.set('@', resolve('src'))
     // // 用cdn方式引入
@@ -29,5 +29,12 @@ module.exports = {
     },
     css: {
         extract: true
-    }
+    },
+    // devServer: {// 环境配置
+    //        host: 'localhost',
+    //        port: 8080,
+    //      // https: false,
+    //       hot:true,
+    //       open: true, //配置自动启动浏览
+    // }
 }
